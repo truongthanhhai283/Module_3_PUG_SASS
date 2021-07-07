@@ -1,0 +1,209 @@
+.col-right {
+  flex: 1 1 25%;
+  width: 25%;
+  height: 100%;
+  max-height: 100%;
+  /* background-color: orangered; */
+  /* padding: 5rem; */
+  padding: 0 3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  .search_bar {
+    /* border-bottom: .05rem solid var(--tertiary-color); */
+    @include display(flex, center, false, space-between);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: $primary-color;
+    z-index: 5;
+    padding: 0.5rem 0;
+    & input[type="text"] {
+      width: 100%;
+      padding: 1.1rem 1.2rem 1.1rem 4rem;
+      border-radius: 3rem;
+      border: 0.1rem solid $search-input-color;
+      background-color: $search-input-color;
+      outline: none;
+      color: $white-color;
+      @include font-size(15);
+    }
+  }
+  .search_bar .search-icon {
+    position: absolute;
+    left: 1.4rem;
+    @include font-size(20);
+    color: $text-color;
+  }
+  .card__trend {
+    border-radius: 2rem;
+    background-color: $container-hover;
+    margin: 1rem 0 0.7rem;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.01rem solid $tertiary-color;
+      padding: 0.2rem 1.5rem 0.2rem;
+      align-items: center;
+      & h1 {
+        font-weight: 800;
+        @include font-size(20);
+      }
+      & .setting {
+        color: $secondary-color;
+        @include font-size(18);
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        @include display(
+          flex,
+          center,
+          false,
+          center
+        ); //$dpl, $al-item, $text-align, $j-content
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+    &__body {
+      @include display(
+        flex,
+        center,
+        false,
+        space-between
+      ); //$dpl, $al-item, $text-align, $j-content
+      padding: 0.6rem 1.5rem 0.6rem;
+      border-bottom: 0.01rem solid $tertiary-color;
+      &__content {
+        margin-top: 0.3rem;
+        .card__trending-country,
+        .card__trending-tweets {
+          color: $text-color;
+          @include font-size(13);
+          line-height: 2rem;
+          margin: 0.3rem 0;
+        }
+        h2 {
+          @include font-size(18);
+        }
+      }
+      .toggle_card {
+        @include font-size(18);
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        color: $text-color;
+      }
+    }
+    &__bottom {
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      padding: 1.5rem;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      & span {
+        color: $secondary-color;
+        @include font-size(15);
+      }
+    }
+  }
+  .card__follow {
+    border-radius: 2rem;
+    background-color: $container-hover;
+    margin: 1rem 0 0.7rem;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.01rem solid $tertiary-color;
+      padding: 0.2rem 1.5rem 0.2rem;
+      align-items: center;
+      padding: 1rem 1.5rem 1rem;
+      & h1 {
+        font-weight: 800;
+        @include font-size(2);
+      }
+    }
+    &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1.5rem 0.6rem;
+      border-bottom: 0.01rem solid $tertiary-color;
+      &__content {
+        display: flex;
+        & img {
+          width: 4.5rem;
+          border-radius: 3rem;
+        }
+        .follow_box {
+          margin-left: 1rem;
+          @include font-size(15);
+          .follow_user_container {
+            display: flex;
+            .follow_user_name {
+              font-weight: 700;
+              margin-right: 0.3rem;
+            }
+          }
+          .follow_box .follow_account {
+            color: $text-color;
+          }
+        }
+      }
+      .btn-follow {
+        color: $secondary-color;
+        font-weight: 600;
+        background-color: inherit;
+        border: 0.1rem solid $secondary-color;
+        @include font-size(15);
+        padding: 0 1rem;
+        display: flex;
+        height: 3rem;
+        width: 8rem;
+        border-radius: 2rem;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+    &__bottom {
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      padding: 1.5rem;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      & span {
+        color: $secondary-color;
+        @include font-size(15);
+      }
+    }
+  }
+  &-bottom {
+    margin: 1rem 0 0.7rem;
+    padding: 0.2rem 1.5rem 0.2rem;
+    @include font-size(13);
+    .lnk_1 a,
+    .lnk_1 span {
+      color: $text-color;
+      margin: 1.3rem 0.5rem;
+      line-height: 2rem;
+    }
+  }
+  .card__trend .card__trend__bottom:hover,
+  .card__follow .card__follow__bottom:hover,
+  .card__follow .card__follow__body:hover,
+  .card__trend .card__trend__body:hover {
+    background-color: $search-input-color;
+    cursor: pointer;
+  }
+  .card__follow__body .btn-follow:hover {
+    // border: 0.1rem solid $secondary-color;
+    @include border(false, 0.1, solid, $secondary-color);
+    background-color: $btn-hover;
+  }
+}

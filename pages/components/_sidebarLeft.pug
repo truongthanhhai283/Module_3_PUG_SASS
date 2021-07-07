@@ -1,0 +1,27 @@
+include _data.pug
+.col.col-left
+    ul
+        a(href="$").logo
+            i.bx.bxl-twitter
+        
+        each item in arrListSidebar
+            li.mobile-hidden
+                a(class=`${item.className}`)
+                    i(class=`${item.classIcon}`)
+                    span(class=`${item.classSpan} tablet-hidden`)= `${item.text}`
+                    span(class=`${item.numberClass}`)= `${item.number}`
+                
+                
+        button(class="tablet-hidden")
+
+
+    .btn-account.mobile-hidden.tablet-hidden
+        .account-info
+            .img
+                img(src="./assets/img/Beans Avatar.jpg" alt="Perfil")
+
+            .account-info__name
+                h2 Truong Thanh Hai
+                span @baziota
+        i.fas.fa-chevron-down(aria-hidden="true")
+       

@@ -1,0 +1,134 @@
+@import "./variables";
+@import "./mixin";
+.col-left {
+  position: fixed;
+  flex: 1 1 23%;
+  width: 19%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0rem 5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  ul {
+    list-style-type: none;
+    width: 100%;
+    .logo {
+      @include font-size(135, true);
+      border-radius: 50%;
+      padding: 1rem;
+      height: 5rem;
+      width: 5rem;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    button {
+      background-color: $secondary-color;
+      color: $white-color;
+      border: none;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      width: 90%;
+      border-radius: 3rem;
+      font-weight: 700;
+      @include font-size(15, true);
+      margin-top: 1rem;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      &:hover {
+        background-color: $secondary-color-hover;
+      }
+      &::before {
+        content: "Tweet";
+      }
+    }
+    li {
+      /* margin: .5rem; */
+      display: flex;
+      align-items: center;
+      padding: 0;
+      .active {
+        color: $secondary-color;
+      }
+    }
+    .notification {
+      position: relative;
+    }
+    .number {
+      @include position(absolute, 0.7, "", "", 1.7); //pos,top,right,bottom,left
+      background-color: $secondary-color;
+      border-radius: 50%;
+      @include font-size(12, true);
+      padding: 0.1rem 0.1rem 0.1rem 0.3rem;
+      display: flex;
+      align-items: center;
+      color: $white-color;
+      width: 2rem;
+      top: 8%;
+      left: 10%;
+    }
+  }
+  a {
+    @include font-size(16, true);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    /* background-color: var(--hover-color); */
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border-radius: 3rem;
+    padding: 1rem 2rem 1rem 1rem;
+    & i {
+      font-size: 1.8rem;
+    }
+    .menu-text {
+      font-weight: 700;
+      padding-left: 1rem;
+    }
+    &:hover {
+      color: $secondary-color;
+      background-color: $hover-color;
+    }
+  }
+  .btn-account {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 3rem;
+    cursor: pointer;
+    padding: 1rem 1.4rem;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:hover {
+      background-color: $hover-color;
+    }
+    .account-info {
+      display: flex;
+      align-items: center;
+      .img {
+        width: 4rem;
+        height: auto;
+        border-radius: 3rem;
+        margin-right: 1rem;
+      }
+      & img {
+        width: 100%;
+        border-radius: 3rem;
+      }
+      .account-info__name {
+        span {
+          color: $text-color;
+          @include font-size(15, true);
+        }
+        h2,
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    i {
+      @include font-size(13, true);
+    }
+  }
+}

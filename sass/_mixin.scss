@@ -1,0 +1,64 @@
+@mixin font-size($px, $lineHeight: false) {
+  $baseline: 14;
+  font-size: #{$px}px;
+  font-size: rem($px, $baseline);
+  @if $lineHeight {
+    $line-height: $px / $baseline * 1.2;
+    line-height: #{$line-height}rem;
+  }
+}
+
+@mixin position(
+  $pos,
+  $t: false,
+  $r: false,
+  $b: false,
+  $l: false,
+  $z-index: null
+) {
+  position: $pos;
+  @if $t {
+    top: #{$t};
+  }
+  @if $r {
+    right: #{$r};
+  }
+  @if $b {
+    bottom: #{$b};
+  }
+  @if $l {
+    left: #{$l};
+  }
+  @if $z-index {
+    z-index: #{$z-index};
+  }
+}
+
+@mixin display($dpl, $al-item: false, $text-align: false, $j-content: false) {
+  display: #{$dpl};
+  @if $al-item {
+    align-items: #{$al-item};
+  }
+  @if $text-align {
+    text-align: #{$text-align};
+  }
+  @if $j-content {
+    justify-content: #{$j-content};
+  }
+}
+
+@mixin border($direction: false, $width: 0, $style: null, $color: null) {
+  @if $direction {
+    border-#{$direction}: #{$width}rem $style $color;
+  } @else {
+    border: #{$width}rem $style $color;
+  }
+}
+
+@mixin borderRadius($direction: false, $width: 0) {
+  @if $direction {
+    border-#{$direction}-radius: #{$width}rem;
+  } @else {
+    border-radius: #{$width}rem;
+  }
+}

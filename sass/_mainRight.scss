@@ -1,0 +1,396 @@
+@import "./variables";
+@import "./animation";
+
+.col-middle {
+  /* padding: 5rem; */ //display($dpl, $al-item, $text-align, $j-content)  position($pos, $t, $r, $b, $l)
+  margin-left: 23%;
+  height: 100%;
+  max-height: 100%;
+  width: 64rem;
+  @include border(
+    left,
+    0.01rem,
+    solid,
+    $tertiary-color
+  ); //border($direction, $width, $style, $color)
+  @include border(right, 0.01, solid, $tertiary-color);
+  @include position(relative);
+
+  &__top {
+    @include display(
+      flex,
+      center,
+      false,
+      space-between
+    ); //$dpl, $al-item, $text-align, $j-content
+    @include position(-webkit-sticky, 0);
+    @include position(sticky, 0);
+    @include border(bottom, 0.05rem, solid, $tertiary-color);
+    background-color: $primary-color;
+
+    z-index: 5;
+
+    & label i {
+      padding: 1rem;
+    }
+
+    .pc-hidden {
+      display: none;
+    }
+
+    .lower {
+      @include position(
+        fixed,
+        0,
+        60%,
+        0,
+        0
+      ); //($pos, $t: false, $r: false, $b: false, $l: false)
+      background: rgba(0, 0, 0, 0.8);
+      transition: 0.1s;
+      transform: translateX(-100%);
+
+      .overlay {
+        .menu-on-modile {
+          ul {
+            color: white;
+            text-align: center;
+
+            padding: 1rem;
+            li {
+              list-style: none;
+              @include font-size(20);
+              line-height: 4rem;
+              text-align: left;
+              & i {
+                display: inline-block;
+                margin-right: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #op:checked ~ .lower {
+      transform: translateX(0);
+    }
+
+    & h1 {
+      @include font-size(20);
+      font-weight: 800;
+    }
+
+    & span,
+    & label {
+      @include font-size(20);
+      @include display(
+        flex,
+        center,
+        false,
+        center
+      ); //$dpl, $al-item, $text-align, $j-content
+      color: $secondary-color;
+      cursor: pointer;
+      border-radius: 3rem;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      width: 3.8rem;
+      height: 3.8rem;
+      transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+
+  &__post {
+    display: flex;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+
+    &-img-profile {
+      width: 5.5rem;
+
+      & img {
+        width: 100%;
+        border-radius: 3rem;
+      }
+    }
+
+    &-content {
+      @include display(flex, flex-start);
+      width: 100%;
+      flex-direction: column;
+      margin-left: 0.8rem;
+
+      & textarea {
+        @include font-size(20);
+        display: block;
+        overflow: hidden;
+        background: inherit;
+        padding: 0 1rem 0 0;
+        margin-left: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+        border: none;
+        resize: none;
+        color: $white-color;
+        outline: none;
+      }
+
+      &-btn {
+        @include display(
+          flex,
+          center,
+          false,
+          center
+        ); //$dpl, $al-item, $text-align, $j-content
+        color: $secondary-color;
+        @include font-size(14);
+        cursor: pointer;
+        padding: 0.5rem 0.8rem;
+        border-radius: 3rem;
+        transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        & i {
+          @include font-size(16);
+        }
+
+        & h3 {
+          margin-left: 1rem;
+          @include font-size(14);
+          font-weight: 700;
+        }
+      }
+
+      .line {
+        @include border(bottom, 0.01rem, solid, $tertiary-color);
+        margin-top: 1rem;
+        width: 100%;
+      }
+
+      &-bottom {
+        @include display(flex, center, false, space-between);
+        width: 100%;
+        margin-top: 1rem;
+
+        .bottom__left {
+          display: flex;
+
+          & span {
+            color: $secondary-color;
+            @include font-size(20);
+            @include display(flex, center, false, center);
+            margin-right: 0.5rem;
+            padding: 0.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+          }
+        }
+
+        .bottom-twett {
+          @include borderRadius(false, 3);
+          background-color: $secondary-color;
+          cursor: pointer;
+          border: none;
+          padding: 1rem 1.2rem;
+          color: $white-color;
+          font-weight: 800;
+
+          &:hover {
+            background: $secondary-color-hover;
+          }
+        }
+      }
+    }
+  }
+
+  .col-middle__principal_line {
+    border: 0.5rem solid $tertiary-color;
+    width: auto;
+  }
+
+  &__post-tweet {
+    display: flex;
+    padding: 2.5rem 0rem 0rem 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    @include border(bottom, 00.05rem, solid, $tertiary-color);
+    @include border(top, 00.05rem, solid, $tertiary-color);
+
+    .col-middle__post-img-profile {
+      width: 5.5rem;
+
+      & img {
+        width: 100%;
+        border-radius: 3rem;
+      }
+    }
+
+    .more-info {
+      @include display(flex, center, false, center);
+      color: $text-color;
+      border-radius: 50%;
+      width: 3rem;
+      height: 2.5rem;
+      margin-right: 0.2rem;
+      @include font-size(12);
+    }
+
+    &-content {
+      @include display(flex, false, false, false);
+      width: 100%;
+      flex-direction: column;
+      margin-left: 0.8rem;
+
+      &_top {
+        @include display(flex, center, false, false);
+        margin-bottom: 10px;
+
+        .author_name,
+        .author_account,
+        .date {
+          @include font-size(15);
+        }
+
+        .checked-user {
+          margin-left: 0.3rem;
+          @include font-size(17);
+        }
+
+        .author_account {
+          color: $text-color;
+          margin-left: 0.3rem;
+        }
+
+        .date {
+          color: $text-color;
+          @include display(flex, center, false, false);
+
+          span {
+            @include font-size(1);
+            margin: 0 0.3rem;
+          }
+        }
+      }
+
+      &_text {
+        @include font-size(15);
+        & p {
+          white-space: pre-line;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* number of lines to show */
+          -webkit-box-orient: vertical;
+          line-height: 2.2rem;
+        }
+
+        .content-link {
+          @include borderRadius(false, 1.5);
+          @include border(false, 0.05, solid, $tertiary-color);
+          margin-top: 1rem;
+          width: 100%;
+
+          & img {
+            @include borderRadius(top-left, 1.5);
+            @include borderRadius(top-right, 1.5);
+            @include border(bottom, 0.05rem, solid, $tertiary-color);
+            width: 100%;
+          }
+        }
+
+        .info__link {
+          line-height: 20px;
+          padding: 1rem;
+
+          & h3 {
+            font-weight: 400;
+          }
+
+          & p {
+            color: $text-color !important;
+          }
+
+          & .p-link {
+            @include font-size(15);
+            color: $text-color;
+          }
+        }
+
+        .content-action {
+          @include display(
+            flex,
+            center,
+            false,
+            space-between
+          ); //$dpl, $al-item, $text-align, $j-content
+          width: 80%;
+          color: $text-color;
+          padding: 0.8rem 0;
+          @include font-size(13);
+          .comment {
+            @include display(flex, center, false, center);
+
+            &:hover {
+              color: $secondary-color;
+
+              & i {
+                color: $secondary-color;
+                background-color: $hover-color;
+              }
+            }
+          }
+
+          .retweet:hover {
+            color: $retweet-color;
+
+            & i {
+              background-color: $retweet-hover-color;
+              color: $retweet-color;
+            }
+          }
+
+          .favorite:hover {
+            color: $favorite-color;
+
+            & i {
+              background-color: $favorite-hover-color;
+              color: $favorite-color;
+            }
+          }
+
+          .external-link:hover {
+            color: $secondary-color;
+
+            & i {
+              color: $secondary-color;
+              background-color: $hover-color;
+            }
+          }
+
+          & span {
+            @include display(flex, center, center, false);
+          }
+
+          & span i {
+            @include display(
+              flex,
+              center,
+              false,
+              center
+            ); //$dpl, $al-item, $text-align, $j-content
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            margin-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+  }
+}

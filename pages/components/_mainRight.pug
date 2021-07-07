@@ -1,0 +1,95 @@
+include _data.pug
+.col.col-middle
+  .col-middle__top
+    h1 Home
+    span
+      i.bx.bxs-star-half
+
+    
+    label(for='op').pc-hidden.tablet-hidden
+        i.fas.fa-bars
+    input#op(type='checkbox' hidden)
+    .lower
+      .overlay.overlay-hugeinc
+        .menu-on-modile
+          ul 
+            each item in arrListNavMobile
+              li 
+                i(class=`${item.icon}`)
+                a(href='#')= item.text
+
+
+  .col-middle__post
+    .col-middle__post-img-profile
+      img(src='./assets/img/Beans Avatar.jpg' alt='Profile')
+    .col-middle__post-content
+      textarea#textarea(placeholder="What's happening?")
+      span.col-middle__post-content-btn
+        i.fas.fa-globe-americas(aria-hidden='true')
+        h3 Everyone can reply
+      // <hr>
+      .line
+      .col-middle__post-content-bottom
+        .bottom__left
+          span
+            i.fas.fa-image(aria-hidden='true')
+          span
+            i.bx.bxs-file-gif
+          span
+            i.bx.bx-poll
+          span
+            i.far.fa-smile(aria-hidden='true')
+          span
+            i.far.fa-calendar-alt(aria-hidden='true')
+        button.bottom-twett Tweet
+  hr.col-middle__principal_line
+  // --------------------------------------------------------------
+  each item in arrListPost
+    .col-middle__post-tweet
+      .col-middle__post-img-profile
+        img(src=`./assets/img/${item.icon}` alt=`${item.alt}`)
+      .col-middle__post-tweet-content
+        .col-middle__post-tweet-content_top
+          h2.author_name #{item.accountName}
+            span.checked-user           
+                if item.offical === true 
+                  i(class=`${item.checkedUser}`)
+          span.author_account @#{item.postBy}
+          span.date
+            span &bull;
+            |  #{item.timePost}
+        .col-middle__post-tweet-content_text
+          p= `${item.desc}`
+          .content-link
+              img(src=`./assets/img/${item.img}` alt='Profile')
+
+          .info__link
+              h3 How to Use a SQlite Database with Android Studio
+              p= `${item.para}`
+              span.p-link
+                i.fas.fa-link(aria-hidden='true')
+                | `#{item.linkPost}`
+          .content-action
+            span.comment
+              i.far.fa-comment(aria-hidden='true')
+              span.comment-number #{item.numberComment}
+            span.retweet
+              i.fas.fa-retweet(aria-hidden='true')
+              span.retweet-number #{item.numberTwitter}
+            span.favorite
+              i.far.fa-heart(aria-hidden='true')
+              span.favorite-number #{item.numberHeart}
+            span.external-link
+              i.bx.bx-link-external 
+      sapn.more-info
+        i.fas.fa-chevron-down(aria-hidden='true')
+             
+  //- .load-wrapp
+  //-   .load-5
+  //-     .ring-2
+  //-       .ball-holder
+  //-         .ball
+  //- .clear
+
+  .loading 
+    img(src='./assets/img/Bars-1s-41px.gif' alt='Profile')

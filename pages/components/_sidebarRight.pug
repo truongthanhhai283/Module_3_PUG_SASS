@@ -1,0 +1,54 @@
+include _data.pug
+.col.col-right
+  .search_bar
+    span.search-icon
+      i.bx.bx-search
+    input(type='text' placeholder='Search Twitter')
+  // 
+  .card__trend
+    .card__trend__top
+      h1 Trends for you
+      span.setting
+        i.fas.fa-cog(aria-hidden='true')
+
+    each item in arrListTrend
+      .card__trend__body
+        .card__trend__body__content
+          span.card__trending-country= item.country
+          h2= item.hashtag
+          span.card__trending-tweets= item.follower
+        span.toggle_card
+          i(class=`${item.toggle}` aria-hidden='true')
+    .card__trend__bottom
+      span Show more
+  // 
+  .card__follow
+    .card__follow__top
+      h1 Who to follow
+    each item in arrListFollow
+      .card__follow__body
+        .card__follow__body__content
+          img(src=`./assets/img/${item.icon}` alt='img').tablet-hidden
+          .follow_box
+            .follow_user_container
+              span.follow_user_name= item.userName
+              span.checked-user
+                if item.offical === true
+                  i.bx.bxs-badge-check
+            span.follow_account= item.followAccount
+        span.btn-follow= item.text
+    .card__follow__bottom
+      span Show more
+ 
+  .col-right-bottom
+    .lnk_1
+      a(href='#') Terms of Service
+      a(href='#') Privacy Policy
+      a(href='#') Cookie Policy
+    .lnk_1
+      a(href='#') Ads info
+      a(href='#')
+        | More 
+        i.fas.fa-angle-down(aria-hidden='true')
+      span &copy; 2020 Twitter, Inc.
+  // DIV END -

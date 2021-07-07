@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 - Pub - SASS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/93146aa192.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body> </body>
+  <div class="container">
+    <div class="row">
+      <div class="col col-left">
+        <ul><a class="logo" href="$"><i class="bx bxl-twitter"></i></a>
+          <li class="mobile-hidden"><a class="active"><i class="bx bxs-home-circle"></i><span class="menu-text tablet-hidden">Home</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="fas fa-hashtag"></i><span class="menu-text tablet-hidden">Explore</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="notification"><i class="far fa-bell"></i><span class="menu-text tablet-hidden">Notifications</span><span class="number">10</span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="far fa-envelope"></i><span class="menu-text tablet-hidden">Messages</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="bx bx-bookmark"></i><span class="menu-text tablet-hidden">Bookmark</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="bx bx-list-ul"></i><span class="menu-text tablet-hidden">Lists</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="far fa-user"></i><span class="menu-text tablet-hidden">Profile</span><span></span></a></li>
+          <li class="mobile-hidden"><a class="undefined"><i class="bx bx-dots-horizontal-rounded"></i><span class="menu-text tablet-hidden">More</span><span></span></a></li>
+          <button class="tablet-hidden"></button>
+        </ul>
+        <div class="btn-account mobile-hidden tablet-hidden">
+          <div class="account-info">
+            <div class="img"><img src="./assets/img/Beans Avatar.jpg" alt="Perfil"></div>
+            <div class="account-info__name">
+              <h2>Truong Thanh Hai</h2><span>@baziota</span>
+            </div>
+          </div><i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col col-middle">
+        <div class="col-middle__top">
+          <h1>Home</h1><span><i class="bx bxs-star-half"></i></span>
+          <label class="pc-hidden tablet-hidden" for="op"><i class="fas fa-bars"></i></label>
+          <input id="op" type="checkbox" hidden>
+          <div class="lower">
+            <div class="overlay overlay-hugeinc">
+              <div class="menu-on-modile">
+                <ul> 
+                  <li> <i class="bx bxs-home-smile"></i><a href="#">Home</a></li>
+                  <li> <i class="bx bxs-user-circle"></i><a href="#">Profile</a></li>
+                  <li> <i class="bx bx-mail-send"></i><a href="#">Message</a></li>
+                  <li> <i class="bx bx-list-ol"></i><a href="#">List</a></li>
+                  <li> <i class="bx bx-list-ol"></i><a href="#">Bookmark</a></li>
+                  <li> <i class="bx bx-list-ol"></i><a href="#">Bookmark</a></li>
+                  <li> <i class="bx bx-list-ol"></i><a href="#">Bookmark</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-middle__post">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/Beans Avatar.jpg" alt="Profile"></div>
+          <div class="col-middle__post-content">
+            <textarea id="textarea" placeholder="What's happening?"></textarea><span class="col-middle__post-content-btn"><i class="fas fa-globe-americas" aria-hidden="true"></i>
+              <h3>Everyone can reply</h3></span>
+            <!-- <hr>-->
+            <div class="line"></div>
+            <div class="col-middle__post-content-bottom">
+              <div class="bottom__left"><span><i class="fas fa-image" aria-hidden="true"></i></span><span><i class="bx bxs-file-gif"></i></span><span><i class="bx bx-poll"></i></span><span><i class="far fa-smile" aria-hidden="true"></i></span><span><i class="far fa-calendar-alt" aria-hidden="true"></i></span></div>
+              <button class="bottom-twett">Tweet</button>
+            </div>
+          </div>
+        </div>
+        <hr class="col-middle__principal_line">
+        <!-- ---------------------------------------------------------------->
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/post_5.jpeg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          <i class="bx bxs-badge-check"></i></span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/post_5.jpeg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/post_7.jpeg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          <i class="bx bxs-badge-check"></i></span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/post_7.jpeg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          <i class="bx bxs-badge-check"></i></span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/florinpop.jpg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          <i class="bx bxs-badge-check"></i></span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/post_6.jpeg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          </span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/huawei.jpg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          <i class="bx bxs-badge-check"></i></span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/post_8.png" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          </span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| .common way to store data on Android is using a SQLite Database. We...common way to store data on Android is using a SQLite Database. We...common way to store data on Android is using a SQLite Database. We...common way to store data on Android is using a SQLite Database. We...common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="col-middle__post-tweet">
+          <div class="col-middle__post-img-profile"><img src="./assets/img/freeCodeCamp.org.jpg" alt="Profile"></div>
+          <div class="col-middle__post-tweet-content">
+            <div class="col-middle__post-tweet-content_top">
+              <h2 class="author_name">freeCodeCamp.org<span class="checked-user">          </span></h2><span class="author_account">@freeCodeCamp.org</span><span class="date"><span>&bull;</span> 30m</span>
+            </div>
+            <div class="col-middle__post-tweet-content_text">
+              <p>Most Android apps need to store data somewhere and the most common way to store data on Android is using a SQLite Database. We...</p>
+              <div class="content-link"><img src="./assets/img/post_9.jpeg" alt="Profile"></div>
+              <div class="info__link">
+                <h3>How to Use a SQlite Database with Android Studio</h3>
+                <p>| Most Android apps need to store data somewhere and the most| common way to store data on Android is using a SQLite Database. We...</p><span class="p-link"><i class="fas fa-link" aria-hidden="true"></i>`freeCodeCamp.org`</span>
+              </div>
+              <div class="content-action"><span class="comment"><i class="far fa-comment" aria-hidden="true"></i><span class="comment-number">2</span></span><span class="retweet"><i class="fas fa-retweet" aria-hidden="true"></i><span class="retweet-number">213</span></span><span class="favorite"><i class="far fa-heart" aria-hidden="true"></i><span class="favorite-number">1</span></span><span class="external-link"><i class="bx bx-link-external"> </i></span></div>
+            </div>
+          </div>
+          <sapn class="more-info"><i class="fas fa-chevron-down" aria-hidden="true"></i></sapn>
+        </div>
+        <div class="loading"> <img src="./assets/img/Bars-1s-41px.gif" alt="Profile"></div>
+      </div>
+      <div class="col col-right">
+        <div class="search_bar"><span class="search-icon"><i class="bx bx-search"></i></span>
+          <input type="text" placeholder="Search Twitter">
+        </div>
+        <!-- -->
+        <div class="card__trend">
+          <div class="card__trend__top">
+            <h1>Trends for you</h1><span class="setting"><i class="fas fa-cog" aria-hidden="true"></i></span>
+          </div>
+          <div class="card__trend__body">
+            <div class="card__trend__body__content"><span class="card__trending-country">Trending in Angola</span>
+              <h2>#LakeShow🏀</h2><span class="card__trending-tweets">10000</span>
+            </div><span class="toggle_card"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+          </div>
+          <div class="card__trend__body">
+            <div class="card__trend__body__content"><span class="card__trending-country">Trending in Angola</span>
+              <h2>#NBAFinals</h2><span class="card__trending-tweets">1200</span>
+            </div><span class="toggle_card"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+          </div>
+          <div class="card__trend__bottom"><span>Show more</span></div>
+        </div>
+        <!-- -->
+        <div class="card__follow">
+          <div class="card__follow__top">
+            <h1>Who to follow</h1>
+          </div>
+          <div class="card__follow__body">
+            <div class="card__follow__body__content"><img class="tablet-hidden" src="./assets/img/huawei.jpg" alt="img">
+              <div class="follow_box">
+                <div class="follow_user_container"><span class="follow_user_name">Huawei Europe</span><span class="checked-user"><i class="bx bxs-badge-check"></i></span></div><span class="follow_account">@Huawei_Europe</span>
+              </div>
+            </div><span class="btn-follow">Follow</span>
+          </div>
+          <div class="card__follow__body">
+            <div class="card__follow__body__content"><img class="tablet-hidden" src="./assets/img/loiane.jpg" alt="img">
+              <div class="follow_box">
+                <div class="follow_user_container"><span class="follow_user_name">Huawei Europe</span><span class="checked-user"></span></div><span class="follow_account">@Huawei_Europe</span>
+              </div>
+            </div><span class="btn-follow">Follow</span>
+          </div>
+          <div class="card__follow__bottom"><span>Show more</span></div>
+        </div>
+        <div class="col-right-bottom">
+          <div class="lnk_1"><a href="#">Terms of Service</a><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a></div>
+          <div class="lnk_1"><a href="#">Ads info</a><a href="#">More <i class="fas fa-angle-down" aria-hidden="true"></i></a><span>&copy; 2020 Twitter, Inc.</span></div>
+        </div>
+        <!-- DIV END --->
+      </div>
+    </div>
+  </div>
+</html>
